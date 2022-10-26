@@ -1,0 +1,52 @@
+= Documentation - How it is made...
+
+:toc: preamble
+
+This is the documentation for the AWS backup script.
+
+== Use Case 
+
+The following diagram 
+
+[text]
+....
+
+│                   ┌─────────────────────┐
+├─ not_synched    ◄─┤ This folder is      │
+│                   │ excluded            │
+│                   └─────────────────────┘
+│
+│                   ┌─────────────────────────────────┐
+└─ synched        ◄─┤ This folder and the sub folders │
+    │               │  will be synched to AWS S3      │
+    │               └─────────────────────────────────┘
+    ├─ backup1
+    ├─ backup2
+    └─ backup3
+  
+....
+
+== Links
+
+* https://www.middlewareinventory.com/blog/aws-s3-sync-example/[Tutorial for synching a folder with S3 and AWS CLI]
+* https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html[AWS docs concerning AWS CLI configuration files]
+* https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/sync.html[AWS docs concerning AWS CLI synch]
+
+== To-Do
+
+. https://markphelps.me/posts/writing-tests-for-your-database-code-in-go/
+* Implement the storage test cases 
+* Storage config in "measurement" initialize it with test db 
+* Using the test config for test_db.go
+* remove the models package
+
+. Create the service layer with the business logic
+* ID creation
+* Validation 
+
+. Create the API layer with gin -> main.go
+* Add Swagger annotations
+
+. Add the static content 
+
+. Create an cmd with logging, ...

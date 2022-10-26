@@ -1,0 +1,21 @@
+= AWS Backup
+
+A script to synch files to a AWS S3 storage. 
+
+
+== To-Do
+
+. First
+* Implement the storage test cases 
+* Storage config in "measurement" initialize it with test db 
+* Using the test config for test_db.go
+* remove the models package
+
+. Second
+* ID creation
+* Validation 
+
+. Third
+* Add Swagger annotations
+
+. Forth
