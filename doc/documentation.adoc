@@ -32,6 +32,28 @@ The following diagram
 * https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html[AWS docs concerning AWS CLI configuration files]
 * https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/sync.html[AWS docs concerning AWS CLI synch]
 
+== Configure the AWS CLI
+
+You can specify a non-default location for the files by setting the AWS_CONFIG_FILE and AWS_SHARED_CREDENTIALS_FILE environment variables to another local path.
+
+[bash]
+....
+
+$ export AWS_CONFIG_FILE="/mnt/veracrypt/aws_cli/config"
+$ export AWS_SHARED_CREDENTIALS_FILE="/mnt/veracrypt/aws_cli/credentials"
+
+....
+
+The configuration and the credentials for the backup are expected in a profile with the name "backup".
+
+
+[bash]
+....
+
+$ aws s3 synch --profile backup
+
+....
+
 == To-Do
 
 . https://markphelps.me/posts/writing-tests-for-your-database-code-in-go/
