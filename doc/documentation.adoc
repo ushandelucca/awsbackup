@@ -55,6 +55,11 @@ rsync -avc --delete "test.a/"  "test.b"
 Manpage: https://download.samba.org/pub/rsync/rsync.html
 
 
+=== cygnwin
+
+rsync -avc "/cygdrive/c/dev/test.a/"  "/cygdrive/t/ch00bhe/test.b"
+
+
 == Configure the AWS CLI
 
 You can specify a non-default location for the files by setting the AWS_CONFIG_FILE and AWS_SHARED_CREDENTIALS_FILE environment variables to another local path.
